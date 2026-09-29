@@ -13,13 +13,13 @@ variable "name_prefix" {
 variable "urls_table_name" {
   description = "DynamoDB table for short URLs."
   type        = string
-  default     = "url-shortener-78-urls"
+  default     = "url-shortener"
 }
 
 variable "users_table_name" {
   description = "DynamoDB table for users."
   type        = string
-  default     = "url-shortener-78-users"
+  default     = "url-shortener-users"
 }
 
 variable "jwt_secret" {
