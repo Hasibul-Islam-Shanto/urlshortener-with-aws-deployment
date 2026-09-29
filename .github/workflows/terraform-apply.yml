@@ -11,7 +11,7 @@ permissions:
   contents: read
 
 concurrency:
-  group: terraform-prod
+  group: terraform-prod-apply
   cancel-in-progress: false
 
 jobs:
