@@ -1,7 +1,7 @@
 variable "name_prefix" {
   description = "Prefix for the Lambda function, IAM role, and HTTP API."
   type        = string
-  default     = "url-shortener"
+  default     = "url-shortener-78"
 }
 
 variable "lambda_zip_path" {

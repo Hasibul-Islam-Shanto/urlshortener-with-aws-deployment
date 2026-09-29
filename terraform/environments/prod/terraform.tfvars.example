@@ -1,4 +1,4 @@
 aws_region      = "us-east-1"
-name_prefix      = "url-shortener"
-urls_table_name  = "url-shortener"
-users_table_name = "url-shortener-users"
+name_prefix      = "url-shortener-78"
+urls_table_name  = "url-shortener-78-urls"
+users_table_name = "url-shortener-78-users"

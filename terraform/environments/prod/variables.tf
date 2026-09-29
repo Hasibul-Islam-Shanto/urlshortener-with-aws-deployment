@@ -7,19 +7,19 @@ variable "aws_region" {
 variable "name_prefix" {
   description = "Prefix for named resources."
   type        = string
-  default     = "url-shortener"
+  default     = "url-shortener-78"
 }
 
 variable "urls_table_name" {
   description = "DynamoDB table for short URLs."
   type        = string
-  default     = "url-shortener"
+  default     = "url-shortener-78-urls"
 }
 
 variable "users_table_name" {
   description = "DynamoDB table for users."
   type        = string
-  default     = "url-shortener-users"
+  default     = "url-shortener-78-users"
 }
 
 variable "jwt_secret" {
