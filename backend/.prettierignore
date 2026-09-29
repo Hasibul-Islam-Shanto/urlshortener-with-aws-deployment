@@ -1,0 +1,6 @@
+dist
+coverage
+lambda-package
+*.zip
+node_modules
+package-lock.json

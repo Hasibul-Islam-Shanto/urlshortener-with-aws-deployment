@@ -1,0 +1,53 @@
+{
+  "name": "url-shortener-backend",
+  "version": "0.1.0",
+  "description": "URL shortener backend: functional domain and application layer with DynamoDB persistence",
+  "private": true,
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "tsx watch src/demo.ts",
+    "demo:dynamodb": "node --env-file-if-exists=.env --import tsx src/demo.ts --dynamodb",
+    "local:create": "node --env-file-if-exists=.env --import tsx scripts/local.ts create",
+    "local:get": "node --env-file-if-exists=.env --import tsx scripts/local.ts get",
+    "local:delete": "node --env-file-if-exists=.env --import tsx scripts/local.ts delete",
+    "local:list": "node --env-file-if-exists=.env --import tsx scripts/local.ts list",
+    "start": "node dist/demo.js",
+    "build": "tsc -p tsconfig.build.json",
+    "package:lambda": "bash scripts/package-lambda.sh",
+    "test": "vitest",
+    "test:run": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "test:integration": "vitest run --config vitest.integration.config.ts",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.1141.0",
+    "@aws-sdk/lib-dynamodb": "^3.1141.0",
+    "bcryptjs": "^3.0.3",
+    "jose": "^6.2.12",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/aws-lambda": "^8.10.163",
+    "@types/node": "^26.6.3",
+    "@vitest/coverage-v8": "^5.0.2",
+    "eslint": "^10.11.0",
+    "eslint-config-prettier": "^10.1.8",
+    "globals": "^17.12.0",
+    "prettier": "^3.9.9",
+    "tsx": "^4.23.15",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.70.1",
+    "vitest": "^5.0.2"
+  }
+}
