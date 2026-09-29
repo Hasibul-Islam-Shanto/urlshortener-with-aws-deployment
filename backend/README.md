@@ -318,3 +318,5 @@ distribution. See `terraform/README.md`. After `terraform apply`, set:
 
 `JWT_SECRET` is `TF_VAR_jwt_secret` in Terraform and must match this file when you call the
 deployed API from local scripts. Do not commit it.
+
+A push to `main` that changes this directory publishes the Lambda zip.
