@@ -14,7 +14,7 @@ export const Header = () => {
       >
         Skip to main content
       </a>
-      <header className="surface-nav mx-auto flex w-full max-w-5xl items-center justify-between gap-space-4 rounded-sm border border-border-muted px-space-5 py-space-3 lg:px-space-6 lg:py-space-2">
+      <header className="surface-nav mx-auto flex w-full max-w-5xl items-center justify-between gap-space-4 rounded-sm border border-border-muted px-space-5 py-space-5 lg:px-space-6 lg:py-space-2">
         <BrandLogo to={brandTo} />
         {isAuthenticated ? <UserMenu /> : null}
       </header>
